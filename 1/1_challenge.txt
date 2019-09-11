@@ -1,0 +1,17 @@
+CHALLENGE
+Create a pod with sidecar container with the following specifications
+
+IMAGES
+- debian
+- nginx
+
+SCENARIO
+Debian Container
+- write content to index.html file on the shared volume and exit
+
+Nginx Container
+- serve content from /usr/share/nginx/html
+
+VALIDATE
+- browse the web page locally
+

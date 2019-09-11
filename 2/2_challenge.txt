@@ -1,0 +1,15 @@
+CHALLENGE
+Validate if container port is needed for nginx container
+
+IMAGES
+- nginx
+
+SCENARIO
+
+Nginx Container
+- initially set a container port and then validate if you need that entry or not
+- is container port informational or necessary?
+
+VALIDATE
+- browse the web page locally with and without container port set
+

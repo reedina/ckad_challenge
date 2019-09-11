@@ -1,0 +1,17 @@
+CHALLENGE
+Define the following environment variables and print them every 10 seconds forever
+
+IMAGES
+- debian
+
+SCENARIO
+
+Debian Container
+- Create the following environment variables
+  FNAME="Mike"
+  LNAME="Rapano
+- Print these variables every 10 seconds
+
+VALIDATE
+- Connect to the containers logs and view the output
+
