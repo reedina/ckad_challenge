@@ -1,0 +1,23 @@
+CHALLENGE
+Create environment variables from two files in configmap directory and use logs to view the environment variables
+
+IMAGES
+- busybox
+
+SCENARIO
+
+Busybox Container
+- Create environment variables from the directory ./configmap
+
+- Each file should be the value of environment variable:
+  File: game.properties,  Env Variable: GAME
+  File: ui.properties,    Env Variable: UI
+
+- Print these Environment variables to the stdout
+
+VALIDATE
+- Connect to the containers logs and view the environment variables:
+  GAME
+  UI
+
+

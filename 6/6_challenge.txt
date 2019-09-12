@@ -1,0 +1,22 @@
+CHALLENGE
+Create all the environment variables from an Environment variable file and use logs to view the environment variables
+
+IMAGES
+- busybox
+
+SCENARIO
+
+Busybox Container
+- Create environment variables from the following Environment variable file:
+
+  evironment variable file
+  - environment.variables
+
+VALIDATE
+- Connect to the containers logs and view the environment variables:
+  enemies
+  lives
+  allowed
+
+- view both variables in one command
+

@@ -1,0 +1,27 @@
+CHALLENGE
+Create multiple environment variables from multiple configmaps and use logs to view the environment variables
+
+IMAGES
+- busybox
+
+SCENARIO
+
+Busybox Container
+- Create the follow environment variables from the following ConfigMaps:
+
+  1st Environment variable
+    configmap value:
+      special.how=very
+    environment variable:
+      SPECIAL_LEVEL_LEY
+
+  2nd Environment variable
+    configmap value:
+      log_level=INFO
+    environment variable:
+      LOG_LEVEL
+
+VALIDATE
+- Connect to the containers logs and view the environment variable
+- view both variables in one command
+

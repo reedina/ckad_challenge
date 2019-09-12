@@ -1,0 +1,17 @@
+CHALLENGE
+Create environment variable from configmap and use logs to view the environment variable
+
+IMAGES
+- busybox
+
+SCENARIO
+
+Busybox Container
+- Create environment variable SPECIAL_LEVEL_KEY from configmap
+- configmap value:  
+  special.how=very
+
+
+VALIDATE
+- Connect to the containers logs and view the environment variable
+
