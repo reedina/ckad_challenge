@@ -1,5 +1,5 @@
 CHALLENGE
-Create environment variables from two files in configmap directory and use logs to view the environment variables
+Create all the environment variables from one file automatically and use logs to view the environment variables
 
 IMAGES
 - busybox
@@ -7,17 +7,28 @@ IMAGES
 SCENARIO
 
 Busybox Container
-- Create environment variables from the directory ./configmap
+- Create all the environment variables from game.properties file
 
-- Each file should be the value of environment variable:
-  File: game.properties,  Env Variable: GAME
-  File: ui.properties,    Env Variable: UI
+- use from-file not from-env-file for "k create configmap"
+
+NOTE: 
+  By using the --from-file instead of the --from-env-file, we have the file name as the "environment variable" and the value being the contents
+  of the file; if we, however, used --from-env-file and envFrom, we would have had all the variables available directly in the shell
+
+  why is this? it has to do with how --from-file and --from-env-file store the data in the pod spec. --from-file stores the data as a multi-line yaml string and
+  --from-env-file stores each entry from the corresponding file as key/value pairs
 
 - Print these Environment variables to the stdout
 
 VALIDATE
 - Connect to the containers logs and view the environment variables:
-  GAME
-  UI
+  enemies=aliens
+  lives=3
+  enemies.cheat=true
+  enemies.cheat.level=noGoodRotten
+  secret.code.passphrase=UUDDLRLRBABAS
+  secret.code.allowed=true
+
+- return the variables from the logs
 
 
