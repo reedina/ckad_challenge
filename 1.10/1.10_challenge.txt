@@ -1,0 +1,22 @@
+CHALLENGE
+Create environment variable from ConfigMap and use logs to view the environment variable and then delete the config map. Delete pod and recreate. Make sure the pod can continue to execute.
+
+IMAGES
+- busybox
+
+SCENARIO
+
+Busybox Container
+- Create environment variable that holds 
+- FNAME=Mike
+
+- Print these Environment variable to the stdout
+
+- Delete ConfigMap and make sure pod can continue to execute
+
+VALIDATE
+- make sure pod can execute after deleting the ConfigMap; make sure after deleting the ConfigMap you delete 
+ and restart the Pod
+
+- return the variable FNAME from the logs before deleting the ConfigMap
+

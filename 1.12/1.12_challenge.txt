@@ -1,0 +1,16 @@
+CHALLENGE
+Create a pod. Add the following command and the following label.
+
+IMAGES
+- bash
+
+SCENARIO
+- the pod should run this command:
+hostname >> /tmp/hostname && sleep 600
+
+- the pod should have this label:
+my-label: test
+
+VALIDATE
+- connect via ssh and make sure hostname is written to file /tmp/hostname
+- get pod based on label; list pods and only select this label

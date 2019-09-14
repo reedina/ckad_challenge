@@ -1,0 +1,26 @@
+CHALLENGE
+Create environment variables that hold metadata.name and limits.memory and use logs to view the environment variables
+
+IMAGES
+- busybox
+
+SCENARIO
+
+Busybox Container
+- Create environment variable that holds metadata.name
+- NAME=metadata.name
+
+- Create environment variable that holds limits.memory
+  MEMORY=limits.memory
+
+- Print these Environment variables to the stdout
+
+VALIDATE
+- Connect to the containers logs and view the environment variables:
+
+NAME=metadata.name
+MEMORY=limits.memory
+
+- return the variables from the logs
+
+

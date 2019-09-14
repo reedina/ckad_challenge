@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod-100
+spec:
+  containers:
+  - name: test-container
+    image: busybox
+    command: ["/bin/sh"]
+    args: ["-c", "sleep infinity"]
+    env:
+    - name: FNAME
+      valueFrom:
+        configMapKeyRef:
+          name: special-config-101
+          key: FNAME
+  restartPolicy: Never

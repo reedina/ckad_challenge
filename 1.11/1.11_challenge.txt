@@ -1,0 +1,13 @@
+CHALLENGE
+Create the answer.pod.yaml and troubleshoot why it does not work and fix it
+
+IMAGES
+- busybox
+
+SCENARIO
+
+Busybox Container
+- fix the error for not starting
+
+VALIDATE
+- make the pod start running without error
