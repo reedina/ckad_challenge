@@ -28,14 +28,16 @@ SCENARIO
     cpu requests: 1100m
     cpu limits:  1400m
 
-- Create the following ConfigMaps:
-(1) Guaranteed Pods
+- Create the following Pods:
+  Create 3 pods with the default resource settings as described in the limit range. The pods should have the following:
+    - busybox image
+    - run indefinately
+    - restartPolicy: OnFailure
+    - Do not set resource requests or limits until all 3 pods are created in qos-example namespace
+    - Fix errors as they happen
 
-
-(2) Burstable Pods
- 
-(3) Best Effort Pods
- 
 
 VALIDATE
-
+  - Have 3 running pods in qos-example namespace
+  - Check resourcquota values for qos-example and if if you over exceed limits
+  - What is the QOS for each pod?

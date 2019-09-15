@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  namespace: qos-example
+  labels:
+    run: pod-02
+  name: pod-02
+spec:
+  containers:
+  - image: busybox
+    name: pod-02
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do sleep 10; done"]
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
